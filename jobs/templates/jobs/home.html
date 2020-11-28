@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <title>Album example for Bootstrap</title>
+    <title>GoodFootPrint</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -17,15 +18,15 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Adama R Tukuli</a>
+            <a class="navbar-brand" href="{% url 'home' %}">GoodFootPrint</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ml-auto">
-                <a class="nav-link active" href="#">Twitter</a>
-                <a class="nav-link" href="#">Resume</a>
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link active" href="https://twitter.com/Qeerranso">Twitter</a>
+                <a class="nav-link" href="{% static 'Adama_resume.pdf' %}">Resume</a>
+                <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
                 
               </div>
             </div>
@@ -39,11 +40,12 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1>Hi, I am Adama, leave good footprint!</h1>
-      <p class="lead text-muted">I am Adama founder of ko-footprint. I am leave good foot print when it come to tech</p>
+      <p class="lead text-muted">I am Adama founder of GoodFootPrint. I am leave good foot print when it come to tech</p>
       <p>
-        <a href="mailto:adamartukuli@gmail.com" class="btn btn-primary my-2">Aany question? Email me</a>
+        <a href="mailto:adamartukuli@gmail.com" class="btn btn-primary my-2">Any question? Email founder Adama R Tukuli</a>
         
       </p>
+      <img src="{% static 'adama_pic.jpeg' %}" height="300" />
     </div>
   </section>
 
@@ -75,7 +77,7 @@
 
 <footer class="text-muted">
   <div class="container text-center">
-      <p>©️ Adama R Tukuli {% now "Y" %}</p>
+      <p>©️ GooFootPrint {% now "Y" %}</p>
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
